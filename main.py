@@ -7,7 +7,7 @@ import pandas as pd
 docs = ["Any liability, loss, cost or expense directly or indirectly arising out of, resulting from, caused or contributed to by Genetically Modified Organisms.",
         "For the purposes of this exclusion the term Genetically Modified Organisms (GMO’s) shall mean and include:",
         "In the event that the definition of GMO under the applicable laws and/or official regulations relating to genetic engineering or modification in an",
-        "Any liability, loss, cost or expense directly or indirectly arising out of, resulting from, caused or contributed to by Genetically"
+        "Any liability, loss, cost or expense directly or indirectly arising out of, resulting from, caused or contributed to by regulations relating to genetic engineering or modification in an"
 
         ]
 
@@ -90,6 +90,8 @@ print(skDocsTfIdfdf)
 csim = cosine_similarity(tfIdfMat,tfIdfMat)
 
 csimDf = pd.DataFrame(csim,index=sorted(docList),columns=sorted(docList))
+
+csimDf.to_csv("result.csv")
 
 
 
