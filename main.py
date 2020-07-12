@@ -4,13 +4,23 @@ import string
 import pandas as pd
 
 # corpus of four documents
-docs = ["Any liability, loss, cost or expense directly or indirectly arising out of, resulting from, caused or contributed to by Genetically Modified Organisms.",
-        "For the purposes of this exclusion the term Genetically Modified Organisms (GMO’s) shall mean and include:",
-        "In the event that the definition of GMO under the applicable laws and/or official regulations relating to genetic engineering or modification in an",
-        "Any liability, loss, cost or expense directly or indirectly arising out of, resulting from, caused or contributed to by regulations relating to genetic engineering or modification in an"
 
-        ]
+# opening text file 1
+policy1 = open('policy1.txt', 'r')
+policy2 = open('policy2.txt', 'r')
+policy3 = open('policy3.txt', 'r')
+policy4 = open('policy4.txt', 'r')
 
+doc1 = policy1.read()
+doc2 = policy2.read()
+doc3 = policy3.read()
+doc4 = policy4.read()
+
+docs = [];
+docs.append(doc1);
+docs.append(doc2);
+docs.append(doc3);
+docs.append(doc4);
 
 def createVocab(docList):
         vocab = {}
